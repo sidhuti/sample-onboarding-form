@@ -34,7 +34,7 @@ src/
 ├── styles/
 │   └── GlobalStyles.ts      # Global theme
 ├── types/
-│   └── form.ts             # TypeScript types
+│   └── types.ts             # TypeScript types
 └── utils/
     └── validation.ts        # Zod schemas
 ```
