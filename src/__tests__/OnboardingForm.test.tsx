@@ -129,7 +129,7 @@ describe('OnboardingForm', () => {
     mockedAxios.get.mockImplementation(() => 
       new Promise((_resolve, reject) => 
         setTimeout(() => reject({ 
-          data: { valid: false, message: 'Invalid corporation number'} 
+          response: { data: { valid: false, message: 'Invalid corporation number'}}
         }), 100)
       )
     );
