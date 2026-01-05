@@ -129,7 +129,7 @@ describe('OnboardingForm', () => {
     mockedAxios.get.mockImplementation(() => 
       new Promise((_resolve, reject) => 
         setTimeout(() => reject({ 
-          data: { valid: false, message: 'Error validating corporation number'} 
+          data: { valid: false, message: 'Invalid corporation number'} 
         }), 100)
       )
     );
@@ -150,7 +150,7 @@ describe('OnboardingForm', () => {
     
     // check if error message shows up
     await waitFor(() => {
-      expect(screen.getByText(/Error validating corporation number/i)).toBeInTheDocument();
+      expect(screen.getByText(/Invalid corporation number/i)).toBeInTheDocument();
     });
   });
 

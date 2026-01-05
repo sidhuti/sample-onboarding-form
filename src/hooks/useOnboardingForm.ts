@@ -38,7 +38,7 @@ export const useOnboardingForm = () => {
       } else if (corporationError) {
         setErrors((prev) => ({
           ...prev,
-          corporationNumber: 'Error validating corporation number',
+          corporationNumber: 'Invalid corporation number',
         }));
       }
     }
