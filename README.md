@@ -34,8 +34,15 @@ src/
 ├── styles/
 │   └── GlobalStyles.ts      # Global theme
 ├── types/
-│   └── form.ts             # TypeScript types
+│   └── types.ts             # TypeScript types
 └── utils/
     └── validation.ts        # Zod schemas
 ```
+
+## Demo
+[Onboarding Form.webm](https://github.com/user-attachments/assets/13b83d21-6089-472f-b939-d89d0762c259)
+
+
+
+
 
