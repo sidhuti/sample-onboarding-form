@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import type { CorporationValidationResponse, OnboardingFormData } from '../types/types';
+import type { CorporationValidationResponse, OnboardingFormData, ApiError } from '../types/types';
 
 const API_BASE_URL = 'https://fe-hometask-api.qa.vault.tryvault.com';
 
@@ -30,7 +30,7 @@ const submitProfile = async (
  * Hook to validate corporation number using React Query
  */
 export const useValidateCorporationNumber = (corporationNumber: string) => {
-  return useQuery({
+  return useQuery<CorporationValidationResponse, ApiError>({
     queryKey: ['corporationValidation', corporationNumber],
     queryFn: () => fetchCorporationValidation(corporationNumber),
     enabled: corporationNumber.length === 9, // Only run when length is 9
@@ -44,7 +44,7 @@ export const useValidateCorporationNumber = (corporationNumber: string) => {
  * Hook to submit profile details using React Query mutation
  */
 export const useSubmitProfile = () => {
-  return useMutation({
+  return useMutation<void, ApiError, OnboardingFormData>({
     mutationFn: submitProfile,
     mutationKey: ['submitProfile'],
   });

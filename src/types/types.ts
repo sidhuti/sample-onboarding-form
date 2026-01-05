@@ -23,6 +23,17 @@ export interface ProfileSubmissionResponse {
 }
 
 
+export interface ApiError {
+  status: number,
+  code: string,
+  message: string,
+  name: string
+  response: {
+    data: {
+      message: string
+    }
+  }
+}
 
 
 export interface InputProps {

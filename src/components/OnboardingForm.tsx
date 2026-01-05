@@ -265,7 +265,7 @@ export const OnboardingForm: React.FC = () => {
 
           {submitError && (
             <SubmitError role="alert">
-              {submitError.message || 'Submission failed. Please try again.'}
+              {submitError.response.data.message || 'Submission failed. Please try again.'}
             </SubmitError>
           )}
 
