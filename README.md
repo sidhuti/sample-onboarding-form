@@ -39,3 +39,9 @@ src/
     └── validation.ts        # Zod schemas
 ```
 
+[Onboarding Form.webm](https://github.com/user-attachments/assets/13b83d21-6089-472f-b939-d89d0762c259)
+
+
+
+
+
