@@ -123,7 +123,6 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
   onChange,
   onBlur,
   error,
-  placeholder = '306 277 6103',
 }) => {
   return (
     <PhoneInputWrapper>
@@ -138,7 +137,6 @@ export const PhoneInput: React.FC<PhoneInputProps> = ({
           value={value}
           onChange={(value) => onChange(value || '')}
           onBlur={onBlur}
-          placeholder={placeholder}
           id={name}
           name={name}
           aria-invalid={error ? 'true' : 'false'}
